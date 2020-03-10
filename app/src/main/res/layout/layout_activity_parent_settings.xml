@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_parent_settings"
+    tools:context=".settings.parent.view.ParentSettingsActivity">
+
+    <View
+        android:layout_width="685px"
+        android:layout_height="178px"
+        android:layout_marginStart="71px"
+        android:background="@drawable/ic_parent_settings_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_input_container"
+        android:layout_width="1544px"
+        android:layout_height="791px"
+        android:layout_marginStart="196px"
+        android:layout_marginTop="301px"
+        android:background="@drawable/bg_parent_settings_input_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_time_control"
+        android:layout_width="704px"
+        android:layout_height="93px"
+        android:layout_marginStart="408px"
+        android:layout_marginTop="97px"
+        android:background="@drawable/bg_parent_settings_list_item"
+        android:onClick="clickAction"
+        app:layout_constraintStart_toStartOf="@id/view_input_container"
+        app:layout_constraintTop_toTopOf="@id/view_input_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50px"
+            android:fontFamily="@font/font_family_happy"
+            android:text="时间控制"
+            android:textColor="#FFD07B2E"
+            android:textSize="37.5px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        right arrow-->
+        <View
+            android:layout_width="23px"
+            android:layout_height="26px"
+            android:layout_marginEnd="52px"
+            android:background="@drawable/ic_parent_settings_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--left arrow-->
+        <View
+            android:layout_width="23px"
+            android:layout_height="26px"
+            android:layout_marginEnd="196px"
+            android:background="@drawable/ic_parent_settings_arrow_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_value_time_control_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100px"
+            android:enabled="false"
+            android:fontFamily="@font/font_family_happy"
+            android:text="关闭"
+            android:textColor="#FFD07B2E"
+            android:textSize="37.5px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_time_limit"
+        android:layout_width="704px"
+        android:layout_height="93px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/bg_parent_settings_list_item"
+        android:onClick="clickAction"
+        app:layout_constraintEnd_toEndOf="@id/cl_time_control"
+        app:layout_constraintStart_toStartOf="@id/cl_time_control"
+        app:layout_constraintTop_toBottomOf="@id/cl_time_control">
+
+        <TextView
+            android:id="@+id/tv_title_time_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50px"
+            android:enabled="false"
+            android:fontFamily="@font/font_family_happy"
+            android:text="全天使用时长"
+            android:textColor="@drawable/text_color_selector_by_enable"
+            android:textSize="37.5px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        right arrow-->
+        <View
+            android:layout_width="23px"
+            android:layout_height="26px"
+            android:layout_marginEnd="52px"
+            android:background="@drawable/ic_parent_settings_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_value_time_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100px"
+            android:enabled="false"
+            android:fontFamily="@font/font_family_happy"
+            android:text="无限制"
+            android:textColor="@drawable/text_color_selector_by_enable"
+            android:textSize="37.5px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_prohibit_period"
+        android:layout_width="704px"
+        android:layout_height="93px"
+        android:layout_marginTop="15px"
+        android:background="@drawable/bg_parent_settings_list_item"
+        android:onClick="clickAction"
+        app:layout_constraintEnd_toEndOf="@id/cl_time_control"
+        app:layout_constraintStart_toStartOf="@id/cl_time_control"
+        app:layout_constraintTop_toBottomOf="@id/cl_time_limit">
+
+        <TextView
+            android:id="@+id/tv_title_prohibit_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50px"
+            android:enabled="false"
+            android:fontFamily="@font/font_family_happy"
+            android:text="禁止使用时间"
+            android:textColor="@drawable/text_color_selector_by_enable"
+            android:textSize="37.5px"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        right arrow-->
+        <View
+            android:layout_width="23px"
+            android:layout_height="26px"
+            android:layout_marginEnd="52px"
+            android:background="@drawable/ic_parent_settings_arrow_right"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_value_prohibit_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100px"
+            android:enabled="false"
+            android:text="20:00 - 23:00"
+            android:textColor="@drawable/text_color_selector_by_enable"
+            android:textSize="26.27px"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="1259px"
+        android:layout_height="586px"
+        android:layout_marginStart="132px"
+        android:layout_marginTop="142px"
+        android:background="@drawable/ic_parent_settings_fish_and_turtle"
+        app:layout_constraintStart_toStartOf="@id/view_input_container"
+        app:layout_constraintTop_toTopOf="@id/view_input_container" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

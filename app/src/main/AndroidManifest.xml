@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.swaiotos.launcher.kidsmode">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/child_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme">
+        <receiver
+            android:name=".settings.parent.service.SwaiotOSSceneChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="action.intent.swaiotos.SCENE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".settings.parent.view.ProhibitPeriodActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".settings.parent.view.TimeLimitActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".settings.parent.view.ParentSettingsActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".home.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="coocaa.intent.category.swaiot.HOME" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.swaiotos.scene.id"
+                android:value="1003" />
+            <meta-data
+                android:name="com.swaiotos.scene.name"
+                android:value="儿童模式" />
+        </activity>
+        <activity android:name=".common.base.BaseActivity" />
+        <activity
+            android:name=".timehint.TimeHintActivity"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

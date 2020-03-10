@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">launcher-kidsmode</string>
+    <item type="id" name="mFirstRecommend"/>
+    <item type="id" name="mSecondRecommend"/>
+    <item type="id" name="mThreeRecommend"/>
+    <item type="id" name="mFourRecommend"/>
+</resources>

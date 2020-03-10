@@ -1,0 +1,6 @@
+[submodule "base"]
+	path = base
+	url = http://source.skyworth.com:3000/SwaiotOS/base.git
+[submodule "property"]
+	path = property
+	url = http://source.skyworth.com:3000/SwaiotOS/property.git

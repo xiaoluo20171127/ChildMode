@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.coocaa.gradle.plugin.builder'
+
+def ver_major = 1
+def ver_minor = 0
+def ver_build = ccbuilder_release_ext.ver_build
+
+android {
+    compileSdkVersion build_property['COMPILE_SDK_VERSION']
+    buildToolsVersion build_property['BUILDTOOLS_VERSION']
+
+    defaultConfig {
+        applicationId "com.swaiotos.launcher.kidsmode"
+        minSdkVersion build_property['MIN_SDK_VERSION']
+        targetSdkVersion build_property['TARGET_SDK_VERSION']
+        versionCode Integer.valueOf(ver_major) * 10000000 + Integer.valueOf(ver_minor) * 100000 + Integer.valueOf(ver_build)
+        versionName ver_major.toString() + "." + ver_minor.toString() + "." + ver_build.toString()
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig gradle.ext.sign_android_default
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':base')
+    implementation project(':base-ui')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'cn.carbswang.android:NumberPickerView:1.2.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:23.2.0'
+}
+
+ccbuilder_release_ext {
+    release_path = "${project.rootProject.projectDir.absolutePath}/release/${ver_major}.${ver_minor}.${ver_build}"
+}

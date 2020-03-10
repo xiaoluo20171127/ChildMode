@@ -1,0 +1,8 @@
+include ':app'
+rootProject.name='launcher-kidsmode'
+
+include ':base'
+project(':base').projectDir = new File('base/library')
+
+include ':base-ui'
+project(':base-ui').projectDir = new File('base/ui-library')

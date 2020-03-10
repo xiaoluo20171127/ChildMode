@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_parent_settings"
+    tools:context=".settings.parent.view.ProhibitPeriodActivity">
+
+    <View
+        android:id="@+id/view_bg_time_input_container"
+        android:layout_width="1544px"
+        android:layout_height="876px"
+        android:layout_marginStart="195px"
+        android:layout_marginTop="219px"
+        android:background="@drawable/bg_prohibit_period_time_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_text_input_box"
+        android:layout_width="614px"
+        android:layout_height="92px"
+        android:layout_marginStart="468px"
+        android:layout_marginTop="256px"
+        android:src="@drawable/bg_prohibit_period_text_input_box"
+        app:layout_constraintStart_toStartOf="@id/view_bg_time_input_container"
+        app:layout_constraintTop_toTopOf="@id/view_bg_time_input_container" />
+
+    <!--    start - hour-->
+    <TextView
+        android:id="@+id/tv_start_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40px"
+        android:inputType="number"
+        android:maxWidth="42px"
+        android:maxLines="1"
+        android:onClick="onViewClick"
+        android:text="00"
+        android:textColor="#FFD07B2E"
+        android:textSize="18.75sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_text_input_box"
+        app:layout_constraintStart_toStartOf="@id/iv_text_input_box"
+        app:layout_constraintTop_toTopOf="@id/iv_text_input_box" />
+    <!--start - hour - up-->
+    <ImageView
+        android:id="@+id/iv_start_hour_up"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginBottom="45px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tv_start_hour"
+        app:layout_constraintEnd_toEndOf="@id/tv_start_hour"
+        app:layout_constraintStart_toStartOf="@id/tv_start_hour" />
+
+    <!--start - hour - down-->
+    <ImageView
+        android:id="@+id/iv_start_hour_down"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginTop="42px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_down"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/tv_start_hour"
+        app:layout_constraintStart_toStartOf="@id/tv_start_hour"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_hour" />
+
+    <!--    start - min-->
+    <TextView
+        android:id="@+id/tv_start_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="189px"
+        android:inputType="number"
+        android:maxWidth="42px"
+        android:maxLines="1"
+        android:onClick="onViewClick"
+        android:text="00"
+        android:textColor="#FFD07B2E"
+        android:textSize="18.75sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_text_input_box"
+        app:layout_constraintStart_toStartOf="@id/iv_text_input_box"
+        app:layout_constraintTop_toTopOf="@id/iv_text_input_box" />
+    <!--start - min - up-->
+    <ImageView
+        android:id="@+id/iv_start_min_up"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginBottom="45px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tv_start_min"
+        app:layout_constraintEnd_toEndOf="@id/tv_start_min"
+        app:layout_constraintStart_toStartOf="@id/tv_start_min" />
+
+    <!--start - min - down-->
+    <ImageView
+        android:id="@+id/iv_start_min_down"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginTop="42px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_down"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/tv_start_min"
+        app:layout_constraintStart_toStartOf="@id/tv_start_min"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_min" />
+
+    <!--    end - hour-->
+    <TextView
+        android:id="@+id/tv_end_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="385px"
+        android:inputType="number"
+        android:maxWidth="42px"
+        android:maxLines="1"
+        android:onClick="onViewClick"
+        android:text="00"
+        android:textColor="#FFD07B2E"
+        android:textSize="18.75sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_text_input_box"
+        app:layout_constraintStart_toStartOf="@id/iv_text_input_box"
+        app:layout_constraintTop_toTopOf="@id/iv_text_input_box" />
+
+    <!--end - hour - up-->
+    <ImageView
+        android:id="@+id/iv_end_hour_up"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginBottom="45px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tv_end_hour"
+        app:layout_constraintEnd_toEndOf="@id/tv_end_hour"
+        app:layout_constraintStart_toStartOf="@id/tv_end_hour" />
+
+    <!--end - hour - down-->
+    <ImageView
+        android:id="@+id/iv_end_hour_down"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginTop="42px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_down"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/tv_end_hour"
+        app:layout_constraintStart_toStartOf="@id/tv_end_hour"
+        app:layout_constraintTop_toBottomOf="@id/tv_end_hour" />
+
+    <!--    end - min-->
+    <TextView
+        android:id="@+id/tv_end_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="537px"
+        android:inputType="number"
+        android:maxWidth="42px"
+        android:maxLines="1"
+        android:onClick="onViewClick"
+        android:text="00"
+        android:textColor="#FFD07B2E"
+        android:textSize="18.75sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_text_input_box"
+        app:layout_constraintStart_toStartOf="@id/iv_text_input_box"
+        app:layout_constraintTop_toTopOf="@id/iv_text_input_box" />
+
+    <!--start - hour - up-->
+    <ImageView
+        android:id="@+id/iv_end_min_up"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginBottom="45px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/tv_end_min"
+        app:layout_constraintEnd_toEndOf="@id/tv_end_min"
+        app:layout_constraintStart_toStartOf="@id/tv_end_min" />
+
+    <!--start - hour - down-->
+    <ImageView
+        android:id="@+id/iv_end_min_down"
+        android:layout_width="36px"
+        android:layout_height="32px"
+        android:layout_marginTop="42px"
+        android:onClick="onViewClick"
+        android:padding="5px"
+        android:src="@drawable/ic_prohibit_period_arrow_down"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/tv_end_min"
+        app:layout_constraintStart_toStartOf="@id/tv_end_min"
+        app:layout_constraintTop_toBottomOf="@id/tv_end_min" />
+    <!--start - hour - up-->
+    <!--start - hour - down-->
+
+    <ImageView
+        android:id="@+id/iv_time_no_limit"
+        android:layout_width="375px"
+        android:layout_height="137px"
+        android:layout_marginStart="122px"
+        android:layout_marginTop="58px"
+        android:onClick="onViewClick"
+        android:src="@drawable/bg_prohibit_period_btn_no_limit"
+        app:layout_constraintStart_toStartOf="@id/iv_text_input_box"
+        app:layout_constraintTop_toBottomOf="@id/iv_text_input_box" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

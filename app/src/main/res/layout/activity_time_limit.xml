@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_parent_settings"
+    tools:context=".settings.parent.view.TimeLimitActivity">
+
+    <!--    无限制（默认）、30分钟、1小时、2小时、3小时、4小时、5小时、6小时-->
+
+
+    <View
+        android:id="@+id/view_bg_time_input_container"
+        android:layout_width="1542.7px"
+        android:layout_height="876.5px"
+        android:layout_marginStart="194.7px"
+        android:layout_marginTop="217.8px"
+        android:background="@drawable/bg_time_limit_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="468px"
+        android:layout_marginTop="175px"
+        android:fontFamily="@font/font_family_happy"
+        android:text="专家建议：儿童全天使用时长不宜超过2小时"
+        android:textColor="#FFD07B2E"
+        android:textSize="29.17px"
+        app:layout_constraintStart_toStartOf="@id/view_bg_time_input_container"
+        app:layout_constraintTop_toTopOf="@id/view_bg_time_input_container" />
+
+    <View
+        android:layout_width="325px"
+        android:layout_height="313px"
+        android:background="@drawable/bg_time_limit_shadow"
+        app:layout_constraintBottom_toBottomOf="@id/numberPicker"
+        app:layout_constraintEnd_toEndOf="@id/numberPicker"
+        app:layout_constraintStart_toStartOf="@id/numberPicker"
+        app:layout_constraintTop_toTopOf="@id/numberPicker" />
+
+    <View
+        android:layout_width="375px"
+        android:layout_height="137px"
+        android:layout_marginStart="6px"
+        android:layout_marginTop="115px"
+        android:background="@drawable/bg_time_limit_picker_selected"
+        app:layout_constraintEnd_toEndOf="@id/numberPicker"
+        app:layout_constraintStart_toStartOf="@id/numberPicker"
+        app:layout_constraintTop_toTopOf="@id/numberPicker" />
+
+    <cn.carbswang.android.numberpickerview.library.NumberPickerView
+        android:id="@+id/numberPicker"
+        android:layout_width="325px"
+        android:layout_height="313px"
+        android:layout_marginTop="443px"
+        android:layout_marginEnd="787px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:npv_RespondChangeOnDetached="false"
+        app:npv_ShowDivider="false"
+        app:npv_ShownCount="3"
+        app:npv_TextColorNormal="#FFD07B2E"
+        app:npv_TextColorSelected="#FFFFFFFF"
+        app:npv_TextSizeNormal="37.5px"
+        app:npv_TextSizeSelected="37.5px"
+        app:npv_WrapSelectorWheel="false" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
